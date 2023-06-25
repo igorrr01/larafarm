@@ -48,7 +48,7 @@
                             </div>
                             <div class="content">
                                 <span>Call Anytime</span>
-                                <a href="tel:+4733378901">+4733378901</a>
+                                <a href="tel:+4733378901">{{ $settings->phone }}</a>
                             </div>
                         </li>
                     </ul>
@@ -64,7 +64,7 @@
                             </div>
                             <div class="content">
                                 <span>Write Email</span>
-                                <a href="mailto:info@agrul.com">info@agrul.com</a>
+                                <a href="mailto:info@agrul.com">{{ $settings->email }}</a>
                             </div>
                         </li>
                     </ul>

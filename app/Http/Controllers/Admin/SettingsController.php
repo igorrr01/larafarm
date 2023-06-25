@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\SettingsPostRequest;
 use Illuminate\Http\Request;
+use App\Models\Settings;
 
 class SettingsController extends Controller
 {
@@ -14,7 +16,8 @@ class SettingsController extends Controller
      */
     public function index()
     {
-        return view('admin.settings');
+        $settings = Settings::first();
+        return view('admin.settings', compact('settings'));
     }
 
     /**
@@ -67,9 +70,13 @@ class SettingsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(SettingsPostRequest $request)
     {
-        //
+        $data = $request->validated();
+        $settings = Settings::first();
+        $settings->update($data);
+        
+        return redirect()->back()->with('success', 'Налаштування оновлено');   
     }
 
     /**
