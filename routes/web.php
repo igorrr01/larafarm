@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Admin\SettingsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::prefix('admin')->group(function () {
+	Route::get('/', [App\Http\Controllers\Admin\IndexController::class, 'index'])->name('admin.index')->middleware('auth');
+	Route::resource('/settings', SettingsController::class, ['as' => 'admin'])->middleware('auth');
+});
