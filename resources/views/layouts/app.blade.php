@@ -37,7 +37,7 @@
 
     <!-- Start Header Top 
     ============================================= -->
-    <div class="top-bar top-style-one bg-dark text-light">
+    <div class="top-bar top-style-one text-light" style="background-color:#0f1145;">
         <div class="container">
             <div class="row align-center">
                 <div class="col-xl-4 col-lg-4 col-md-4 info">
@@ -47,14 +47,14 @@
                                 <i class="fas fa-phone-alt"></i>
                             </div>
                             <div class="content">
-                                <span>Call Anytime</span>
+                                <span>Телефон</span>
                                 <a href="tel:+4733378901">{{ $settings->phone }}</a>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 logo">
-                    <a href="#"><img src="assets/img/logo-mix.png" alt="Logo"></a>
+                    <a href="#"><img src="/public/build/agro/img/logo-header.png" alt="Logo"></a>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 text-end info">
                     <ul>
@@ -63,7 +63,7 @@
                                 <i class="fas fa-comments-alt-dollar"></i>
                             </div>
                             <div class="content">
-                                <span>Write Email</span>
+                                <span>Email</span>
                                 <a href="mailto:info@agrul.com">{{ $settings->email }}</a>
                             </div>
                         </li>
@@ -99,7 +99,7 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" class="logo" alt="Logo"></a>
+                    <a class="navbar-brand" href="index.html"><img src="/public/build/agro/img/logo-header.png" class="logo" alt="Logo"></a>
                 </div>
                 <!-- End Header Navigation -->
 
@@ -112,80 +112,20 @@
                     </button>
                     
                     <ul class="nav navbar-nav navbar-left" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Home</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="index.html">Agriculture</a></li>
-                                <li><a href="index-3.html">Farm Shop</a></li>
-                                <li><a href="index-2.html">Organic Farm</a></li>
-                            </ul>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Головна</a>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Pages</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="about-us.html">About Us</a></li>
-                                <li><a href="team.html">Team</a></li>
-                                <li><a href="team-details.html">Team Details</a></li>
-                                <li><a href="contact-us.html">Contact Us</a></li>
-                                <li><a href="faq.html">Faq</a></li>
-                                <li><a href="404.html">Error Page</a></li>
-                            </ul>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Новини</a>
                         </li>
-                        <li class="dropdown">
-                            <a href="project.html" class="dropdown-toggle" data-toggle="dropdown" >Projects</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="project.html">Project</a></li>
-                                <li><a href="project-details.html">Project Details</a></li>
-                            </ul>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Про нас</a>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Services</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="services.html">Services Version One</a></li>
-                                <li><a href="services-2.html">Services Version Two</a></li>
-                                <li><a href="services-details.html">Services Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Blog</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="blog-standard.html">Blog Standard</a></li>
-                                <li><a href="blog-with-sidebar.html">Blog With Sidebar</a></li>
-                                <li><a href="blog-2-colum.html">Blog Grid Two Colum</a></li>
-                                <li><a href="blog-3-colum.html">Blog Grid Three Colum</a></li>
-                                <li><a href="blog-single.html">Blog Single</a></li>
-                                <li><a href="blog-single-with-sidebar.html">Blog Single With Sidebar</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Shop</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="shop.html">Shop</a></li>
-                                <li><a href="shop-single.html">Shop Single</a></li>
-                                <li><a href="shop-single-thumb-only.html">Shop Single Two</a></li>
-                            </ul>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Контакти</a>
                         </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
-
-                <div class="attr-right">
-                    <!-- Start Atribute Navigation -->
-                    <div class="attr-nav">
-                        <ul>
-                            <li class="opening-hours">
-                                <div class="call">
-                                    <div class="info">
-                                        <p>Opening hours</p>
-                                        <h5>Sun - Fri 9:30 - 17:00</h5>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- End Atribute Navigation -->
-
-                </div>
-
             </div>  
 
             <!-- Overlay screen for menu -->
@@ -379,6 +319,6 @@
 <script src="/public/build/agro/js/YTPlayer.min.js"></script>
 <script src="/public/build/agro/js/TweenMax.min.js"></script>
 <script src="/public/build/agro/js/validnavs.js"></script>
-<script src="/public/build/agro/js/custom.js"></script>
+<script src="/public/build/agro/js/main.js"></script>
 
 </html>

@@ -13,5 +13,7 @@ class Settings extends Model
         'name',
         'email',
         'phone',
+        'slider_1_text',
+        'slider_2_text',
     ];
 }

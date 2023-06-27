@@ -26,6 +26,21 @@ class SettingsPostRequest extends FormRequest
         return [
             'phone' => 'required|integer',
             'email' => 'required|string|max:255',
+            'slider_1_text' => 'required|string|max:250',
+            'slider_2_text' => 'required|string|max:250',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'phone.required' => 'Номер телефону не заповнений',
+            'phone.integer' => 'Номер телефону тільки в числовому форматі',
+            'email.required' => 'Поштова скринька не заповнена',
+            'slider_1_text.required' => 'Текст 1 слайдеру не заповнений',
+            'slider_2_text.required' => 'Текст 2 слайдеру не заповнений',
+            'slider_1_text.max' => 'Маскимальна довжина тексту 1 слайдеру 250 символів',
+            'slider_2_text.max' => 'Маскимальна довжина тексту 2 слайдеру 250 символів',
         ];
     }
 }
