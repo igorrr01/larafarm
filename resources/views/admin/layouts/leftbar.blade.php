@@ -48,12 +48,17 @@
                 <nav class="pt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column " data-widget="treeview" role="menu">
                         <li class="nav-item">
+                            <a class="nav-link " href="{{ route('admin.product.index') }}">
+                            <i class="fas fa-store"></i>
+                                <p>Товари</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link " href="{{ route('admin.settings.index') }}">
                             <i class="fas fa-wrench"></i>
                                 <p>Загальні налаштуання</p>
                             </a>
                         </li>
-                
                     </ul>
                 </nav>
             </div>

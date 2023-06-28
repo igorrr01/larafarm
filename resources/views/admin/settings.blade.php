@@ -31,28 +31,28 @@
                                 <label for="name">Номер телефону</label>
                                 <input type="text" name="phone" class="form-control @error('phone') is-invalid @enderror" value="{{ $settings->phone }}">
                                 @error('phone')
-                                    <div class="alert alert-danger">{{ $message }}</div>
+                                <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label for="price">Поштова скринька</label>
                                 <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ $settings->email }}">
                                 @error('email')
-                                    <div class="alert alert-danger">{{ $message }}</div>
+                                <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label for="price">Текст першого слайдеру</label>
                                 <textarea name="slider_1_text" rows="5" class="form-control @error('slider_1_text') is-invalid @enderror">{{ $settings->slider_1_text }}</textarea>
                                 @error('slider_1_text')
-                                    <div class="alert alert-danger">{{ $message }}</div>
+                                <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label for="price">Текст другого слайдеру</label>
                                 <textarea name="slider_2_text" rows="5" class="form-control @error('slider_2_text') is-invalid @enderror">{{ $settings->slider_2_text }}</textarea>
                                 @error('slider_2_text')
-                                    <div class="alert alert-danger">{{ $message }}</div>
+                                <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                         </div>
@@ -64,6 +64,5 @@
             </div>
         </div>
     </div>
-</div>
 </div>
 @endsection
