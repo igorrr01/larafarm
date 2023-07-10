@@ -108,74 +108,49 @@
 
     <!-- Start Product
     ============================================= -->
-    <div class="product-list-area box-layout default-padding bottom-less bg-gray text-center" style="background-image: url(/public/assets/img/shape/16.png);">
+    <div class="product-list-area box-layout default-padding bottom-less bg-gray text-center p-1" style="background-image: url(/public/assets/img/shape/16.png);">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="site-heading text-center">
-                        <h5 class="sub-title">Тут можна якись там довідник Про культури</h5>
-                        <h2 class="title">Смачні й органічні продукти</h2>
-                        <div class="devider"></div>
-                        <p>
-                            Everything melancholy uncommonly but solicitude inhabiting <br> projection off. Connection stimulated estimating.
-                        </p>
-                    </div>
+                @if($productsBy)
+                <div class="m-2">
+                    <h3>Ми продаємо</h3>
                 </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-
                 <div class="product-list-box">
+                    @foreach($productsSell as $productSell)
                     <!-- Single Item -->
                     <div class="product-list-item">
-                        <a href="#">
-                            <div class="thumb"><img src="/public/assets/img/icon/1.png" alt="Icon"></div>
-                            <h5>Blueberry</h5>
+                        <a href="{{ route('product.show', $productSell->id) }}">
+                            <img class="rounded" src="/storage/app/{{ $productSell->photo }}" alt="img" height="200">
+                            <h5>{{ $productSell->name }}</h5>
+                            <span class="text-muted fs-6 fw-light "><i>{{ mb_substr($productSell->description, 0, 100) }}...</i></span>
                         </a>
+                        <span class="badge bg-light text-dark">{{ $productSell->price }} грн</span>
+                        <span class="badge bg-dark">{{ $productSell->price_type }}</span>
                     </div>
                     <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="product-list-item">
-                        <a href="#">
-                            <div class="thumb"><img src="/public/assets/img/icon/7.png" alt="Icon"></div>
-                            <h5>Fruit</h5>
-                        </a>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="product-list-item">
-                        <a href="#">
-                            <div class="thumb"><img src="/public/assets/img/icon/2.png" alt="Icon"></div>
-                            <h5>Strawberry</h5>
-                        </a>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="product-list-item">
-                        <a href="#">
-                            <div class="thumb"><img src="/public/assets/img/icon/4.png" alt="Icon"></div>
-                            <h5>Eggplant</h5>
-                        </a>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="product-list-item">
-                        <a href="#">
-                            <div class="thumb"><img src="/public/assets/img/icon/5.png" alt="Icon"></div>
-                            <h5>Orange</h5>
-                        </a>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="product-list-item">
-                        <a href="#">
-                            <div class="thumb"><img src="/public/assets/img/icon/8.png" alt="Icon"></div>
-                            <h5>Harvest</h5>
-                        </a>
-                    </div>
-                    <!-- End Single Item -->
+                    @endforeach
                 </div>
+                @endif
+                @if($productsSell)
+                <div class="m-2">
+                    <h3>Купуємо</h3>
+                </div>
+                <div class="product-list-box">
+                    @foreach($productsBy as $productBy)
+                    <!-- Single Item -->
+                    <div class="product-list-item">
+                        <a href="{{ route('product.show', $productBy->id) }}">
+                            <img class="rounded" src="/storage/app/{{ $productBy->photo }}" alt="img" height="200">
+                            <h5>{{ $productBy->name }}</h5>
+                            <span class="text-muted fs-6 fw-light "><i>{{ mb_substr($productBy->description, 0, 100) }}...</i></span>
+                        </a>
+                        <span class="badge bg-light text-dark">{{ $productBy->price }} грн</span>
+                        <span class="badge bg-dark">{{ $productBy->price_type }}</span>
+                    </div>
+                    <!-- End Single Item -->
+                    @endforeach
+                </div>
+                @endif
             </div>
         </div>
     </div>
@@ -193,64 +168,8 @@
                             <div class="date"><strong>18</strong> <span>Apr, 22</span></div>
                         </div>
                         <div class="info">
-                            <div class="meta">
-                                <ul>
-                                    <li>
-                                        <a href="#"><i class="fas fa-user-circle"></i> Admin</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fas fa-comments"></i> 26 Comments</a>
-                                    </li>
-                                </ul>
-                            </div>
                             <h4 class="title">
                                 <a href="#">Announcing if attachment resolution sentiments Possession ye no mr unaffected remarkably</a>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-30">
-                    <div class="blog-style-one">
-                        <div class="thumb">
-                            <a href="#"><img src="/public/assets/img/800x1000.png" alt="Image Not Found"></a>
-                            <div class="date"><strong>15</strong> <span>Jul, 22</span></div>
-                        </div>
-                        <div class="info">
-                            <div class="meta">
-                                <ul>
-                                    <li>
-                                        <a href="#"><i class="fas fa-user-circle"></i> User</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fas fa-comments"></i> 35 Comments</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <h4 class="title">
-                                <a href="#">Considered imprudence of he friendship day</a>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-30">
-                    <div class="blog-style-one">
-                        <div class="thumb">
-                            <a href="#"><img src="/public/assets/img/800x1000.png" alt="Image Not Found"></a>
-                            <div class="date"><strong>24</strong> <span>Feb, 22</span></div>
-                        </div>
-                        <div class="info">
-                            <div class="meta">
-                                <ul>
-                                    <li>
-                                        <a href="#"><i class="fas fa-user-circle"></i> User</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fas fa-comments"></i> 12 Comments</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <h4 class="title">
-                                <a href="#">Overcame breeding or concerns removing past</a>
                             </h4>
                         </div>
                     </div>
