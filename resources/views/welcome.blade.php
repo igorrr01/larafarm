@@ -158,25 +158,30 @@
 
         <!-- Start Blog Area
     ============================================= -->
+
+    @if(isset($posts))
     <div class="blog-area full-blog blog-grid default-padding bottom-less">
         <div class="container">
             <div class="row">
+            @foreach($posts as $post)
                 <div class="col-lg-6 mb-30">
                     <div class="blog-style-one">
                         <div class="thumb">
-                            <a href="#"><img src="/public/assets/img/1500x890.png" alt="Image Not Found"></a>
-                            <div class="date"><strong>18</strong> <span>Apr, 22</span></div>
+                            <a href="{{ route('blog.show', $post->id) }}"><img src="/storage/app/{{ $post->photo }}" alt="img"></a>
+                            <div class="date"><strong>{{ $post->created_at->format('d') }}</strong> <span>{{ App\Http\Controllers\Helper::intToMounthName($post->created_at->format('n')-1) }}, {{ $post->created_at->format('Y') }}</span></div>
                         </div>
                         <div class="info">
                             <h4 class="title">
-                                <a href="#">Announcing if attachment resolution sentiments Possession ye no mr unaffected remarkably</a>
+                                <a href="{{ route('blog.show', $post->id) }}">{{ $post->title }}</a>
                             </h4>
                         </div>
                     </div>
                 </div>
+            @endforeach
             </div>
         </div>
     </div>
+    @endif
     <!-- End Blog Area -->
 
     <!-- Start Contact Us 

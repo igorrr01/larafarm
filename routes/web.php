@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,8 @@ Route::prefix('admin')->group(function () {
 	Route::resource('/settings', SettingsController::class, ['as' => 'admin'])->middleware('auth');
 	Route::patch('/settings/update', [SettingsController::class, 'update'],  ['as' => 'admin'])->name('admin.settings.update')->middleware('auth');
 	Route::resource('/product', ProductController::class, ['as' => 'admin'])->middleware('auth');
+	Route::resource('/blog', BlogController::class, ['as' => 'admin'])->middleware('auth');
 
 });
 Route::resource('/product', App\Http\Controllers\ProductController::class);
+Route::resource('/blog', App\Http\Controllers\BlogController::class);

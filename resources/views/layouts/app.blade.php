@@ -54,7 +54,7 @@
                     </ul>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 logo">
-                    <a href="#"><img src="/public/build/agro/img/logo-header.png" alt="Logo"></a>
+                    <a href="/"><img src="/public/build/agro/img/logo-header.png" alt="Logo"></a>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 text-end info">
                     <ul>
@@ -99,7 +99,7 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="/public/build/agro/img/logo-header.png" class="logo" alt="Logo"></a>
+                    <a class="navbar-brand" href="/"><img src="/public/build/agro/img/logo-header.png" class="logo" alt="Logo"></a>
                 </div>
                 <!-- End Header Navigation -->
 
@@ -113,16 +113,16 @@
                     
                     <ul class="nav navbar-nav navbar-left" data-in="fadeInDown" data-out="fadeOutUp">
                         <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Головна</a>
+                            <a href="/" class="dropdown-toggle" data-toggle="dropdown" >Головна</a>
                         </li>
                         <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Новини</a>
+                            <a href="/" class="dropdown-toggle" data-toggle="dropdown" >Новини</a>
                         </li>
                         <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Про нас</a>
+                            <a href="/" class="dropdown-toggle" data-toggle="dropdown" >Про нас</a>
                         </li>
                         <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Контакти</a>
+                            <a href="/" class="dropdown-toggle" data-toggle="dropdown" >Контакти</a>
                         </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -154,13 +154,13 @@
         <div class="col-lg-6 text-end">
             <ul style="display: flex; list-style: none; justify-content: flex-end;">
                 <li style="margin-right: 10px;">
-                    <a href="#" style="display: inline;">Правила</a>
+                    <a href="/" style="display: inline;">Правила</a>
                 </li>
                 <li style="margin-right: 10px;">
-                    <a href="#" style="display: inline;">Політика</a>
+                    <a href="/" style="display: inline;">Політика</a>
                 </li>
                 <li>
-                    <a href="#" style="display: inline;">Підтримка</a>
+                    <a href="/" style="display: inline;">Підтримка</a>
                 </li>
             </ul>
         </div>
